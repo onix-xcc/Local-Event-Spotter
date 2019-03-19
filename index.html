@@ -4,9 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Local Event Page</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Music</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Sport</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Movies</a></li>
+      </ul>
+    <nav class="navigation" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a class="dropdown-trigger" href="index.html" data-target="dropdown1">Events<i class="material-icons right">arrow_drop_down</i></a></li> 
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+        </div>
+      </nav>
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <br><br>
+          <h1 class="header center">Local Event Finder</h1>
+          <div class="row center">
+            <h5 class="header col s12">All events at one location.</h5>
+          </div>
+          <div class="row center">
+                <form>
+                  <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon search" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form>
+          </div>
+          <br><br>
+    
+        </div>
+      </div>
+      <div class="container main">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center"><i class="material-icons">Concerts</i></h2>
+                <img src="assets/images/music-300.jpg" alt="Music" style="width:100%;">
+                <p class="img-text">The Band</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center"><i class="material-icons">Sports</i></h2>
+                <img src="assets/images/sport-300.jpg" alt="Sport" style="width:100%;">
+                <p class="img-text">The Team</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center "><i class="material-icons">Movies</i></h2>
+                <img src="assets/images/movies-300.jpg" alt="Movies" style="width:100%;">
+                <p class="img-text">The Movie</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+      </div>
+    
+      <footer class="page-footer grey darken-1">
+        <div class="container">
+          <div class="row">
+            <div class="col l3 s12">
+              <h5 class="white-text">Settings</h5>
+              <ul>
+                <li><a class="white-text" href="#!">Link 1</a></li>
+                <li><a class="white-text" href="#!">Link 2</a></li>
+              </ul>
+            </div>
+            <div class="col l6 s12">
+              <h5 class="white-text">Text</h5>
+              <p class="grey-text text-lighten-4"> Enjoy the page!</p>
+            </div>
+            <div class="col l3 s12">
+              <h5 class="white-text">Connect</h5>
+              <ul>
+                <li><a class="white-text" href="#!">Link 1</a></li>
+                <li><a class="white-text" href="#!">Link 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+              <a class="white-text">Copyright</a>
+          </div>
+        </div>
+      </footer>
+    
+
+
+
+  <script type="text/javascript" src="assets/javascript/"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="assets/javascript/script.js"></script>
   
 </body>
 </html>
