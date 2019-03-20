@@ -4,90 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Local Event Page</title>
+  <title>Local Event Spotter</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
   <link rel="stylesheet" href="assets/css/style.css">
+  
 </head>
 
-<body>
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Music</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Sport</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Movies</a></li>
-      </ul>
-    <nav class="navigation" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a class="dropdown-trigger" href="index.html" data-target="dropdown1">Events<i class="material-icons right">arrow_drop_down</i></a></li> 
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href=about.html">About</a></li>
+<body class="grey darken-3">
+
+
+    <!-- Navbar-------------------------------------------------------------------------------- -->
+    <div class="navbar-fixed">
+      <nav class="navigation" role="navigation">
+        <div class="nav-wrapper container ">
+          <a id="logo-container" href="assets/index.html" class="brand-logo"><img src="assets/images/logo-5.png" style="max-width:80% "></a>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down menu-text">
+            <li><a href="#!">Music</a></li>
+            <li><a href="#!">Sport</a></li>
+            <li><a href="#!">Movies</a></li>
+            
           </ul>
-        
           <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
+            <li><a href="#!">Music</a></li>
+            <li><a href="#!">Sport</a></li>
+            <li><a href="#!">Movies</a></li>
           </ul>
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
         </div>
       </nav>
-      <div class="section no-pad-bot" id="index-banner">
-        <div class="container main">
+    </div>
+    <!--Slide banner -------------------------------------------------------------------------------- -->
+   
+  
+
+      <!-- Text Banner -------------------------------------------------------------------------------- -->
+      <section class="section no-pad-bot z-depth-1" id="index-banner">
+        <div class="container">
           <br><br>
-          <h1 class="header center">Contact Us</h1>
-          <div class="row center">
-            <h5 class="header col s12">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</h5>
+          <h1 class="header black-text center">Contact Us</h1>
+        </div>
+      </section>
+
+      <!-- Main Section-------------------------------------------------------------------------------- -->
+      <main class="section main-container">
+         <div class="container ">
+          <div class="row">
+            <form class="col m8 offset-m2 s12">
+              <div class="input-field col s12">
+                  <input id="name" type="text">
+                  <label for="name">Name</label>
+              </div>
+              <div class="input-field col s12">
+                  <input id="email" type="email" class="form-input">
+                  <label for="email">Email</label>
+              </div>
+              <div class="input-field col s12">
+                <textarea id="message" class="materialize-textarea"></textarea>
+                <label for="message">Message</label>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col m12">
+                  <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button" name="action">Send Message</button></p>
+                </div>
+            </div>
+        </form>
           </div>
-          <div class="row center">
-                <form>
-                  <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label class="label-icon search" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                  </div>
-                </form>
-          </div>
-          <br><br>
-    
-      <footer class="page-footer grey darken-1">
+        </div>
+      </main>
+
+    <!-- Footer----------------------------------------------------------------------------------->
+      <footer class="page-footer black">
         <div class="container">
           <div class="row">
-            <div class="col l3 s12">
-              <h5 class="white-text">Settings</h5>
+            <div class="col l6 s12">
+              <!-- <h5 class="white-text">Connect</h5> -->
               <ul>
-                <li><a class="white-text" href="#!">Link 1</a></li>
-                <li><a class="white-text" href="#!">Link 2</a></li>
+                <li><a class="white-text" href="assets/images/Facebook.PNG">Facebook Icon</a></li>
+                <li><a class="white-text" href="assets/images/Twitter.PNG">Twitter Icon</a></li>
+                <li><a class="white-text" href="assets/images/Instagram.png">Instagram Icon</a></li>
+                <li><a class="white-text" href="assets/images/YouTube.png">YouTube Icon</a></li>
               </ul>
             </div>
             <div class="col l6 s12">
-              <h5 class="white-text">Text</h5>
-              <p class="grey-text text-lighten-4"> Enjoy the page!</p>
-            </div>
-            <div class="col l3 s12">
-              <h5 class="white-text">Connect</h5>
-              <ul>
-                <li><a class="white-text" href="#!">Link 1</a></li>
-                <li><a class="white-text" href="#!">Link 2</a></li>
-              </ul>
-            </div>
+                <h4 class="grey-text text-lighten-4">What are you going to do this week?</h4>
+                <ul>
+                    <li><a class="white-text left link-position" href="about.html">About Us</a></li>
+                    <li><a class="white-text center link-position" href="contact.html">Contact Us</a></li>
+                  </ul>
+              </div>
           </div>
         </div>
         <div class="footer-copyright">
           <div class="container">
-              <a class="white-text">Copyright</a>
+              <a class="white-text">© Local Event Spotter 2019. All rights reserved.</a>
           </div>
         </div>
       </footer>
     
 
-
-
-  <script type="text/javascript" src="assets/javascript/"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
   <script src="assets/javascript/script.js"></script>
   
 </body>

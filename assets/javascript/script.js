@@ -1,8 +1,14 @@
 $(document).ready(function(){
 
-
-  $(".dropdown-trigger").dropdown();
+  //----- Materialize features ---------------------//
   $('.sidenav').sidenav();
+  $('.slider').slider();
+  $('.materialboxed').materialbox();
+});
+
+
+
+
 
     //--- AJAX --------------------------------------------------------------//
     // var topic = $(this).attr("data-name");
@@ -26,12 +32,3 @@ $(document).ready(function(){
     // messagingSenderId: "48500713462"
     // };
     // firebase.initializeApp(config);
-   
-
-
-  
-    
-
-
-
-});
