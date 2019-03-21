@@ -13,23 +13,24 @@
   
 </head>
 
-<body class="grey lighten-2 black-text">
+<body class="grey darken-3">
+
 
 <!-- Navbar-------------------------------------------------------------------------------- -->
-<div class="navbar-fixed">
+  <div class="navbar-fixed">
     <nav class="navigation nav-bar" role="navigation">
       <div class="nav-wrapper container ">
         <a id="logo-container" href="index.html" class="brand-logo">Local Event Spotter</a>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down menu-text">
-          <li><a href="#!">Music</a></li>
-          <li><a href="#!">Sport</a></li>
-          <li><a href="#!">Movies</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="sports.html">Sport</a></li>
+          <li><a href="movies.html">Movies</a></li>
         </ul>
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="#!">Music</a></li>
-          <li><a href="#!">Sport</a></li>
-          <li><a href="#!">Movies</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="sports.html">Sport</a></li>
+          <li><a href="movies.html">Movies</a></li>
         </ul>
       </div>
     </nav>
@@ -42,54 +43,43 @@
     <div class="container">
       <div class="header white-text center"><a href="index.html"><img src="assets/images/logo-6.png"></a></div>
         <div class="row center">
-          <h3 class="header white-text col s12">About Us</h3>
+          <h3 class="header white-text col s12">Movies</h3>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Main Section-------------------------------------------------------------------------------- -->
-  <main class="section main-container">
+  <main class="section main-container white">
       <div class="container ">
       <div class="row">
-        <div class="col s12 m12">
-          <ul class="collection">
-            </li>
-            <li class="collection-item avatar">
-              <img src="#!" alt="" class="circle">
-              <i class="material-icons circle">face</i>
-              <span class="title">Shane Gove</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo eros, varius quis orci nec, semper pharetra urna. Mauris ultrices libero sit amet eros scelerisque blandit. Nulla viverra risus sed risus cursus pharetra. Nam commodo fringilla metus, in mattis quam iaculis vel. Nulla tristique massa urna. Phasellus purus diam, laoreet vel efficitur vel, lobortis at odio.
-              </p>
-            </li>
-            <br>
-            <li class="collection-item avatar">
-              <img src="#!" alt="" class="circle">
-              <i class="material-icons circle">face</i>
-              <span class="title">Onix Castro Camacho</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo eros, varius quis orci nec, semper pharetra urna. Mauris ultrices libero sit amet eros scelerisque blandit. Nulla viverra risus sed risus cursus pharetra. Nam commodo fringilla metus, in mattis quam iaculis vel. Nulla tristique massa urna. Phasellus purus diam, laoreet vel efficitur vel, lobortis at odio.
-              </p>
-            </li>
-            <br>
-            <li class="collection-item avatar">
-              <img src="#!" alt="" class="circle">
-              <i class="material-icons circle">face</i>
-              <span class="title">Kari LeBlanc</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo eros, varius quis orci nec, semper pharetra urna. Mauris ultrices libero sit amet eros scelerisque blandit. Nulla viverra risus sed risus cursus pharetra. Nam commodo fringilla metus, in mattis quam iaculis vel. Nulla tristique massa urna. Phasellus purus diam, laoreet vel efficitur vel, lobortis at odio.
-              </p>
-            </li>
-            <br>
-            <li class="collection-item avatar">
-              <img src="assets/images/nina.jpg" alt="" class="circle">
-              <span class="title">Nina Calderone</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo eros, varius quis orci nec, semper pharetra urna. Mauris ultrices libero sit amet eros scelerisque blandit. Nulla viverra risus sed risus cursus pharetra. Nam commodo fringilla metus, in mattis quam iaculis vel. Nulla tristique massa urna. Phasellus purus diam, laoreet vel efficitur vel, lobortis at odio.
-              </p>
-            </li>
-          </ul>
+        <table>
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+            </tr>
+          </thead>
+  
+          <tbody class="movie-table">
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </main>
@@ -121,6 +111,7 @@
       </div>
     </div>
   </footer>
+    
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

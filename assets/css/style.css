@@ -21,9 +21,8 @@ body{
 /* ----- Slide banner ----- */
 
 /* ----- Text banner ----- */
-
 #index-banner{
-  padding: 2em 0 2em;
+  padding: 3em 0 1em;
 }
 
 .input-field{
@@ -31,7 +30,6 @@ body{
 }
 
 /* ----- Main Section ----- */
-
 .main-container {
   flex: 1 0 auto;
   padding: 3em 0 3em;
@@ -61,7 +59,6 @@ body{
 } */
 
 /* ----- Footer Section ----- */
-
 .page-footer{
   background-color: #bd3e3e;
   text-align: center;
