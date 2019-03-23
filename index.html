@@ -23,11 +23,13 @@
         <a id="logo-container" href="index.html" class="brand-logo">Local Event Spotter</a>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down menu-text">
+          <li><a href="index.html">Home</a></li>
           <li><a href="music.html">Music</a></li>
           <li><a href="sports.html">Sport</a></li>
           <li><a href="movies.html">Movies</a></li>
         </ul>
         <ul id="nav-mobile" class="sidenav">
+          <li><a href="index.html">Home</a></li>
           <li><a href="music.html">Music</a></li>
           <li><a href="sports.html">Sport</a></li>
           <li><a href="movies.html">Movies</a></li>
@@ -68,17 +70,29 @@
   <!-- Text Banner -------------------------------------------------------------------------------- -->
   <section class="section no-pad-bot z-depth-1 black" id="index-banner">
     <div class="container">
-      <div class="header white-text center"><a href="index.html"><img src="assets/images/logo-6.png"></a></div>
-      <div class="row center">
-        <h5 class="header white-text col s12">All events at one location</h5>
+      <div class="row">
+        <div class="header white-text center">
+          <a href="index.html"><img src="assets/images/logo-6.png"></a>
+        </div> 
+      </div> 
+      <div class="row">
+        <h5 class="header white-text center col s12">All events at one location</h5>
       </div>
-      <div class="row center">
-            <form>
-              <div class="input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon grey-text" for="search"><i class="material-icons">Zip Code</i></label>
-              </div>
-            </form>
+      <div class="row">
+        <form class=" zip-code-input col s10 offset-s3">
+          <div class="input-field ">
+            <input class id="zip" name= "zip" type="text" required pattern="[0-9]{5}">
+            <label class="label-icon grey-text" for="search">Enter a zip code</label>
+          </div>
+          <select class="browser-default">
+            <option value="" disabled selected>Mile from Zip Code</option>
+            <option value="1">5 Miles</option>
+            <option value="2">10 Miles</option>
+            <option value="3">25 Miles</option>
+            <option value="3">50 Miles</option>
+          </select>
+            <label class="label-icon grey-text" for="search"></label>
+          </form>
       </div>
     </div>
   </section>
@@ -88,11 +102,6 @@
       <div class="nav-wrapper container ">
        <div class="row">
           <h4 class="left">This weeks event in your area.</h4>
-          <ul class="remark-text left">
-            <ol>Change above title font</ol>
-            <ol>Change all content text</ol>
-            <ol>Create jQuery to add HTML tags and insert API info based on IP location and week's schedule into below placeholder</ol>
-          </ul>
         <div class="col s12 m4">
           <div class="icon-block">
             <img class="materialboxed" src="assets/images/music-300.jpg" alt="Music" style="width:100%;">

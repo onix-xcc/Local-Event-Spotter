@@ -17,12 +17,19 @@ body{
   font-size: 1.2em;
   padding-top: 0.5em;
 }
+.brand-logo{
+  font-size: 0.5em;
+}
 
 /* ----- Slide banner ----- */
 
 /* ----- Text banner ----- */
 #index-banner{
   padding: 3em 0 1em;
+}
+.zip-code-input{
+  max-width: 50%;
+  text-align: center;
 }
 
 .input-field{
@@ -89,10 +96,3 @@ body{
   margin-right: 1em;
   display: inline-block;
 }
-
-.remark-text{
-  color: red;
-}
-
-
-
