@@ -12,10 +12,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-
 <body class="grey darken-3">
-
-
 <!-- Navbar-------------------------------------------------------------------------------- -->
   <div class="navbar-fixed">
     <nav class="navigation nav-bar" role="navigation">
@@ -35,20 +32,34 @@
       </div>
     </nav>
   </div>
-
   <!--Slide banner -------------------------------------------------------------------------------- -->
-
   <!-- Text Banner -------------------------------------------------------------------------------- -->
   <section class="section no-pad-bot z-depth-1 black" id="index-banner">
     <div class="container">
       <div class="header white-text center"><a href="index.html"><img src="assets/images/logo-6.png"></a></div>
         <div class="row center">
           <h3 class="header white-text col s12">Movies</h3>
+          <div class="row">
+            <form class=" zip-code-input col s10 offset-s3">
+              <div class="input-field ">
+                <input class id="zip" name= "zip" type="text" required pattern="[0-9]{5}">
+                <label class="label-icon grey-text" for="search">Enter a zip code</label>
+              </div>
+              <select class="browser-default">
+                <option value="" disabled selected>Mile from Zip Code</option>
+                <option value="1">5 Miles</option>
+                <option value="2">10 Miles</option>
+                <option value="3">25 Miles</option>
+                <option value="3">50 Miles</option>
+              </select>
+              <label class="label-icon grey-text" for="search"></label>
+              <input id="select-artist" type="submit" value="GO!">
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Main Section-------------------------------------------------------------------------------- -->
   <main class="section main-container white">
       <div class="container ">
@@ -56,35 +67,92 @@
         <table>
           <thead>
             <tr>
-                <th>Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
+              <th>Movie Name</th>
+              <th>Rating</th>
+              <th>Show Times</th>
             </tr>
           </thead>
   
           <tbody class="movie-table">
-            <tr>
-              <td>Alvin</td>
-              <td>Eclair</td>
-              <td>$0.87</td>
-            </tr>
-            <tr>
-              <td>Alan</td>
-              <td>Jellybean</td>
-              <td>$3.76</td>
-            </tr>
-            <tr>
-              <td>Jonathan</td>
-              <td>Lollipop</td>
-              <td>$7.00</td>
-            </tr>
+
+     
           </tbody>
         </table>
       </div>
     </div>
   </main>
+  <!-- API Code------------------------------------------------------------------------------------>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript"> 
 
-  <!-- Footer----------------------------------------------------------------------------------->
+   // The createRow function takes data returned by OMDB and appends the table data to the tbody
+   var createRow = function(response) {
+    console.log(response);
+      // Create a new table row element
+      var tRow = $("<tr>");
+
+      // Methods run on jQuery selectors return the selector they we run on
+      // This is why we can create and save a reference to a td in the same statement we update its text
+      var titleTd = $("<td>").text(response.title);
+      var ratingTd = $("<td>").text(response.ratings[0].code);
+var showTimeLoopLength = 0;
+if (response.showtimes.length >= 10){
+  showTimeLoopLength=10;
+}
+else {
+  showTimeLoopLength=response.showtimes.length;
+}
+
+var showTimeText=""
+for(var i=0; i<showTimeLoopLength; i++){
+  showTimeText=showTimeText+ " " + response.showtimes[i].dateTime
+}
+
+      var showtimesTd = $("<td>").text(showTimeText);
+        
+      // Append the newly created table data to the table row
+      tRow.append(titleTd, ratingTd, showtimesTd);
+      // Append the table row to the table body
+      $(".movie-table").append(tRow);
+    };
+
+     function searchMoviesInTown(zipcode) {
+      var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=2019-03-23&zip=" + zipcode + "&radius=10&imageSize=Md&api_key=j7ukwvbq74h5d9t7acars4em";
+       $.ajax({
+         url: queryURL,
+         method: "GET"
+       }).then(function(response) {
+        console.log(response);
+        for(var i=0; i<response.length; i++){
+           createRow(response[i]);
+        }
+        
+     
+       });
+    };
+
+
+    $("#select-artist").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    var inputArtist = $("#zip").val().trim();
+
+    // Running the searchBandsInTown function(passing in the artist as an argument)
+    searchMoviesInTown(inputArtist);
+  });
+
+//   $('#txtSearchProdAssign').keypress(function (e) {
+//  var key = e.which;
+//  if(key == 13)  // the enter key code
+//   {
+//     $('input[name = butAssignProd]').click();
+//     return false;  
+//   }
+// }); 
+
+  </script>
+     <!-- Footer----------------------------------------------------------------------------------->
   <footer class=" page-footer">
       <div class="row row-icons">
         <div class="col l12 s12">
@@ -112,7 +180,6 @@
     </div>
   </footer>
     
-
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> -->
