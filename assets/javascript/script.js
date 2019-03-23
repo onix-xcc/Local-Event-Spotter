@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
   //----- Materialize features ---------------------//
   $('.sidenav').sidenav();
@@ -8,27 +8,35 @@ $(document).ready(function(){
 
 
 
+//  --- AJAX for Seatgeek --------------------------------------------------------------//
+// -------------------- 
+var cl = console.log
+// var zipCode = $(this).attr("data-name");
+var zipCode = 75211
+var queryURL = "https://api.seatgeek.com/2/venues?postal_code=" + zipCode + "&client_id=MTU4NDc5NTh8MTU1MzEzMDYzNy4zNA";
+
+$.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
+      cl(queryURL);
+      cl(response);
 
 
-    //--- AJAX --------------------------------------------------------------//
-    // var topic = $(this).attr("data-name");
-    // var imageCount = 10;
-    // var userKey = "9he7lvkyjKSGNO2Kg1XR9B5enfXb9j5C"
-    // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=" + userKey + "&limit=" + imageCount;
 
-    // $.ajax({
-    //   url: queryURL,
-    //   method: "GET"
-    // }).then(function(response) {
-    //   console.log(queryURL);
 
-    // //-- Initialize Firebase ----------------------------------------------//
-    // var config = {
-    // apiKey: "AIzaSyAyBYJFRwwDHbOGYKG9CZkqtAinxmP6nDo",
-    // authDomain: "smu-g5-p1-eventpage.firebaseapp.com",
-    // databaseURL: "https://smu-g5-p1-eventpage.firebaseio.com",
-    // projectId: "smu-g5-p1-eventpage",
-    // storageBucket: "smu-g5-p1-eventpage.appspot.com",
-    // messagingSenderId: "48500713462"
-    // };
-    // firebase.initializeApp(config);
+
+
+
+
+
+      // //-- Initialize Firebase ----------------------------------------------//
+      var config = {
+        apiKey: "AIzaSyAyBYJFRwwDHbOGYKG9CZkqtAinxmP6nDo",
+        authDomain: "smu-g5-p1-eventpage.firebaseapp.com",
+        databaseURL: "https://smu-g5-p1-eventpage.firebaseio.com",
+        projectId: "smu-g5-p1-eventpage",
+        storageBucket: "smu-g5-p1-eventpage.appspot.com",
+        messagingSenderId: "48500713462"
+      };
+      firebase.initializeApp(config);
