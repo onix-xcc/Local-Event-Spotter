@@ -13,32 +13,14 @@
   
 </head>
 
-<body class="grey lighten-2 black-text">
+<body>
 
-
-  <!-- Navbar-------------------------------------------------------------------------------- -->
+  <!-- Navbar jQuery generated--file:page-setup.js------------------------------------->
   <div class="navbar-fixed">
-    <nav class="navigation nav-bar" role="navigation">
-      <div class="nav-wrapper container ">
-        <a id="logo-container" href="index.html" class="brand-logo">Local Event Spotter</a>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down menu-text">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="sports.html">Sport</a></li>
-          <li><a href="movies.html">Movies</a></li>
-        </ul>
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="sports.html">Sport</a></li>
-          <li><a href="movies.html">Movies</a></li>
-        </ul>
-      </div>
-    </nav>
+    <nav class="navigation nav-bar" role="navigation"></nav>
   </div>
 
-  <!--Slide banner -------------------------------------------------------------------------------- -->
+  <!--Slide banner--only on landing page----------------------------------------------->
   <div class="slider z-depth-2">
       <div class="container slide-container">
       <ul class="slides">
@@ -67,33 +49,14 @@
   </div>
 </div>
 
-  <!-- Text Banner -------------------------------------------------------------------------------- -->
+ <!-- Text Banner-- jQuery generated for row-1 and row-3--file:page-setup.js------------------------>
   <section class="section no-pad-bot z-depth-1 black" id="index-banner">
-    <div class="container">
-      <div class="row">
-        <div class="header white-text center">
-          <a href="index.html"><img src="assets/images/logo-6.png"></a>
-        </div> 
-      </div> 
-      <div class="row">
+    <div class="container text-banner">
+      <div class="row-1"></div>
+      <div class="row-2">
         <h5 class="header white-text center col s12">All events at one location</h5>
       </div>
-      <div class="row">
-        <form class=" zip-code-input col s10 offset-s3">
-          <div class="input-field ">
-            <input class id="zip" name= "zip" type="text" required pattern="[0-9]{5}">
-            <label class="label-icon grey-text" for="search">Enter a zip code</label>
-          </div>
-          <select class="browser-default">
-            <option value="" disabled selected>Mile from Zip Code</option>
-            <option value="1">5 Miles</option>
-            <option value="2">10 Miles</option>
-            <option value="3">25 Miles</option>
-            <option value="3">50 Miles</option>
-          </select>
-          <label class="label-icon grey-text" for="search"></label>
-        </form>
-      </div>
+      <div class="row-3"></div>
     </div>
   </section>
 
@@ -124,62 +87,17 @@
     </div>
   </main>
 
-  <!-- Footer----------------------------------------------------------------------------------->
-  <footer class=" page-footer">
-      <div class="row row-icons">
-        <div class="col l12 s12">
-          <ul class="icons">
-            <li><a class="sm-icon" href="assets/images/Facebook.png"><img src="assets/images/facebook-logo.png"></a></li>
-            <li><a class="sm-icon" href="assets/images/Twitter.png"><img src="assets/images/twitter-logo.png"></li>
-            <li><a class="sm-icon" href="assets/images/Instagram.png"><img src="assets/images/instagram-logo.png"></a></li>
-            <li><a class="sm-icon" href="assets/images/YouTube.png"><img src="assets/images/YouTube-logo.png"></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row row-links">
-          <div class="col l12 s12">
-            <ul class="links">
-              <li><a class="black-text link-position" href="about.html">About Us</a></li>
-              <li><a class="black-text link-position" href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
-      </div>
-    </div>
-    <div class="footer-copyright black">
-      <div class="container">
-          <a class="white-text">© Local Event Spotter 2019. All rights reserved.</a>
-      </div>
-    </div>
-  </footer>
+ <!-- Footer jQuery generated--file:page-setup.js------------------------------------->
+  <footer class="page-footer"></footer>
     
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> -->
   <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
-  <script type="text/javascript">
+  <script src="assets/javascript/page-setup.js"></script>
+  <script src="assets/javascript/script.js"></script>
 
-//  --- AJAX for Seatgeek --------------------------------------------------------------//
-// -------------------- 
-var cl = console.log;
-// Add an event listener to Zip Code variable, limit it to mile range
-var zipCode =  75211;
-//Add an event listener for the drop-down radius of the miles
-var mileRange= "10mi";
-var queryURL = "https://api.seatgeek.com/2/events?geoip=" + zipCode + "&range=" + mileRange + "&client_id=MTU4NDc5NTh8MTU1MzEzMDYzNy4zNA";
-
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-      cl(queryURL);
-      cl(response);
-      cl("Events: " + response.events);
-  });
-
-
-
-</script>
 
 </body>
 </html>
