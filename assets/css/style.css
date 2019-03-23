@@ -1,0 +1,98 @@
+/* ---- Global style -----*/
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ----- Navigation bar  ----- */
+.nav-bar{
+  min-height: 80px;
+  padding-top: 0.8em;
+  background-color: #14213d;
+}
+
+.menu-text li a {
+  font-size: 1.2em;
+  padding-top: 0.5em;
+}
+
+/* ----- Slide banner ----- */
+
+/* ----- Text banner ----- */
+#index-banner{
+  padding: 3em 0 1em;
+}
+
+.input-field{
+  background-color: white;
+}
+
+/* ----- Main Section ----- */
+.main-container {
+  flex: 1 0 auto;
+  padding: 3em 0 3em;
+}
+
+.icon-block{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.img-text {
+  position: absolute;
+  bottom: 0;
+  margin-left: 0;
+  background-color:rgb(68, 68, 68);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.5em;
+  opacity: 0.7;
+  width: 60%;
+}
+/* .tile{
+  color: #14213d;
+  color: red;
+  font-weight: bold;
+} */
+
+/* ----- Footer Section ----- */
+.page-footer{
+  background-color: #bd3e3e;
+  text-align: center;
+}
+
+.row-links .row-icons{
+  padding: 0;
+  margin: 0;
+}
+
+.icons li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+ .links li {
+  display: inline-block;
+  margin: 0 0.2em;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.footer-copyright{
+    background-color: #0c1324;
+}
+
+.link-position{
+  margin-right: 1em;
+  display: inline-block;
+}
+
+.remark-text{
+  color: red;
+}
+
+
+

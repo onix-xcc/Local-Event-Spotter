@@ -4,9 +4,151 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Local Event Spotter</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+  
 </head>
-<body>
+
+<body class="grey lighten-2 black-text">
+
+
+  <!-- Navbar-------------------------------------------------------------------------------- -->
+  <div class="navbar-fixed">
+    <nav class="navigation nav-bar" role="navigation">
+      <div class="nav-wrapper container ">
+        <a id="logo-container" href="index.html" class="brand-logo">Local Event Spotter</a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down menu-text">
+          <li><a href="music.html">Music</a></li>
+          <li><a href="sports.html">Sport</a></li>
+          <li><a href="movies.html">Movies</a></li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="music.html">Music</a></li>
+          <li><a href="sports.html">Sport</a></li>
+          <li><a href="movies.html">Movies</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!--Slide banner -------------------------------------------------------------------------------- -->
+  <div class="slider z-depth-2">
+      <div class="container slide-container">
+      <ul class="slides">
+      <li>
+        <img src="assets/images/banner-1.jpg"> 
+        <div class="caption left-align black-text">
+          <h3>Concerts</h3>
+          <h5 class="light grey-darken-4-text text-lighten-3">Take your friends to a concert.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="assets/images/banner-2.jpg">
+        <div class="caption right-align black-text">
+          <h3>Sport</h3>
+          <h5 class="light grey-darken-4-text text-lighten-3">Take your family to a baseball game.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="assets/images/banner-3.jpg">
+        <div class="caption right-align  black-text">
+          <h3>Movies</h3>
+          <h5 class="light grey-darken-4-text text-lighten-3">Take your date out for a movie night.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <!-- Text Banner -------------------------------------------------------------------------------- -->
+  <section class="section no-pad-bot z-depth-1 black" id="index-banner">
+    <div class="container">
+      <div class="header white-text center"><a href="index.html"><img src="assets/images/logo-6.png"></a></div>
+      <div class="row center">
+        <h5 class="header white-text col s12">All events at one location</h5>
+      </div>
+      <div class="row center">
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon grey-text" for="search"><i class="material-icons">Zip Code</i></label>
+              </div>
+            </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section-------------------------------------------------------------------------------- -->
+  <main class="section main-container">
+      <div class="nav-wrapper container ">
+       <div class="row">
+          <h4 class="left">This weeks event in your area.</h4>
+          <ul class="remark-text left">
+            <ol>Change above title font</ol>
+            <ol>Change all content text</ol>
+            <ol>Create jQuery to add HTML tags and insert API info based on IP location and week's schedule into below placeholder</ol>
+          </ul>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <img class="materialboxed" src="assets/images/music-300.jpg" alt="Music" style="width:100%;">
+            <p class="img-text">The Band</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <img class="materialboxed" src="assets/images/sport-300.jpg" alt="Sport" style="width:100%;">
+            <p class="img-text">The Team</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <img class="materialboxed" src="assets/images/movies-300.jpg" alt="Movies" style="width:100%;">
+            <p class="img-text">The Movie</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer----------------------------------------------------------------------------------->
+  <footer class=" page-footer">
+      <div class="row row-icons">
+        <div class="col l12 s12">
+          <ul class="icons">
+            <li><a class="sm-icon" href="assets/images/Facebook.png"><img src="assets/images/facebook-logo.png"></a></li>
+            <li><a class="sm-icon" href="assets/images/Twitter.png"><img src="assets/images/twitter-logo.png"></li>
+            <li><a class="sm-icon" href="assets/images/Instagram.png"><img src="assets/images/instagram-logo.png"></a></li>
+            <li><a class="sm-icon" href="assets/images/YouTube.png"><img src="assets/images/YouTube-logo.png"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row row-links">
+          <div class="col l12 s12">
+            <ul class="links">
+              <li><a class="black-text link-position" href="about.html">About Us</a></li>
+              <li><a class="black-text link-position" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <div class="footer-copyright black">
+      <div class="container">
+          <a class="white-text">© Local Event Spotter 2019. All rights reserved.</a>
+      </div>
+    </div>
+  </footer>
+    
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+  <script src="assets/javascript/script.js"></script>
   
 </body>
 </html>
