@@ -32,6 +32,9 @@ body{
 .input-field{
   background-color: white;
 }
+.date-field{
+  background-color: white;
+}
 
 /* ----- Main Section ----- */
 .main-container {
