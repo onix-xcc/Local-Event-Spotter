@@ -12,10 +12,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-
 <body class="grey darken-3">
-
-
 <!-- Navbar-------------------------------------------------------------------------------- -->
   <div class="navbar-fixed">
     <nav class="navigation nav-bar" role="navigation">
@@ -37,20 +34,34 @@
       </div>
     </nav>
   </div>
-
   <!--Slide banner -------------------------------------------------------------------------------- -->
-
   <!-- Text Banner -------------------------------------------------------------------------------- -->
   <section class="section no-pad-bot z-depth-1 black" id="index-banner">
     <div class="container">
       <div class="header white-text center"><a href="index.html"><img src="assets/images/logo-6.png"></a></div>
         <div class="row center">
           <h3 class="header white-text col s12">Movies</h3>
+          <div class="row">
+            <form class=" zip-code-input col s10 offset-s3">
+              <div class="input-field ">
+                <input class id="zip" name= "zip" type="text" required pattern="[0-9]{5}">
+                <label class="label-icon grey-text" for="search">Enter a zip code</label>
+              </div>
+              <select class="browser-default">
+                <option value="" disabled selected>Mile from Zip Code</option>
+                <option value="1">5 Miles</option>
+                <option value="2">10 Miles</option>
+                <option value="3">25 Miles</option>
+                <option value="3">50 Miles</option>
+              </select>
+              <label class="label-icon grey-text" for="search"></label>
+              <input id="select-artist" type="submit" value="GO!">
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Main Section-------------------------------------------------------------------------------- -->
   <main class="section main-container white">
       <div class="container ">
@@ -59,25 +70,25 @@
           <thead>
             <tr>
               <th>Movie Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
+
+              <th>Rating</th>
+              <th>Show Times</th>
+
+
+
             </tr>
           </thead>
   
           <tbody class="movie-table">
-            <tr>
-              <td>Alvin</td>
-              <td>Eclair</td>
-              <td>$0.87</td>
-            </tr>
+
      
           </tbody>
         </table>
       </div>
     </div>
   </main>
-
-  <!-- Footer----------------------------------------------------------------------------------->
+ 
+     <!-- Footer----------------------------------------------------------------------------------->
   <footer class=" page-footer">
       <div class="row row-icons">
         <div class="col l12 s12">
@@ -105,7 +116,6 @@
     </div>
   </footer>
     
-
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> -->
