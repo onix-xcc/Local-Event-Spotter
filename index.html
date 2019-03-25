@@ -159,23 +159,23 @@
   <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
   <script type="text/javascript">
 
-//  --- AJAX for Seatgeek --------------------------------------------------------------//
-// -------------------- 
-var cl = console.log;
-// Add an event listener to Zip Code variable, limit it to mile range
-var zipCode =  75211;
-//Add an event listener for the drop-down radius of the miles
-var mileRange= "10mi";
-var queryURL = "https://api.seatgeek.com/2/events?geoip=" + zipCode + "&range=" + mileRange + "&client_id=MTU4NDc5NTh8MTU1MzEzMDYzNy4zNA";
+// //  --- AJAX for Seatgeek --------------------------------------------------------------//
+// // -------------------- 
+// var cl = console.log;
+// // Add an event listener to Zip Code variable, limit it to mile range
+// var zipCode =  75211;
+// //Add an event listener for the drop-down radius of the miles
+// var mileRange= "10mi";
+// var queryURL = "https://api.seatgeek.com/2/events?geoip=" + zipCode + "&range=" + mileRange + "&client_id=MTU4NDc5NTh8MTU1MzEzMDYzNy4zNA";
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-      cl(queryURL);
-      cl(response);
-      cl("Events: " + response.events);
-  });
+// $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   }).then(function (response) {
+//       cl(queryURL);
+//       cl(response);
+//       cl("Events: " + response.events);
+//   });
 
 
 
