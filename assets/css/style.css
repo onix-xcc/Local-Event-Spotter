@@ -8,17 +8,14 @@ body{
 
 /* ----- Navigation bar  ----- */
 .nav-bar{
-  min-height: 80px;
+  min-height: 100px;
   padding-top: 0.8em;
   background-color: #14213d;
 }
 
 .menu-text li a {
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding-top: 0.5em;
-}
-.brand-logo{
-  font-size: 0.5em;
 }
 
 /* ----- Slide banner ----- */
@@ -33,6 +30,9 @@ body{
 }
 
 .input-field{
+  background-color: white;
+}
+.date-field{
   background-color: white;
 }
 
@@ -58,6 +58,15 @@ body{
   font-size: 1.5em;
   opacity: 0.7;
   width: 60%;
+}
+.input-field{
+  margin-top: 0;
+
+}
+
+#go-btn{
+  margin-left: 1rem;
+  margin-top: 0.2rem;
 }
 
 /* ----- Footer Section ----- */

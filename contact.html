@@ -8,109 +8,79 @@
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
 </head>
 
-<body class="grey darken-3">
+<body>
 
-
-<!-- Navbar-------------------------------------------------------------------------------- -->
+  <!-- Navbar jQuery generated--file:page-setup.js------------------------------------->
   <div class="navbar-fixed">
-    <nav class="navigation nav-bar" role="navigation">
-      <div class="nav-wrapper container ">
-        <a id="logo-container" href="index.html" class="brand-logo">Local Event Spotter</a>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down menu-text">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="sports.html">Sport</a></li>
-          <li><a href="movies.html">Movies</a></li>
-        </ul>
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="sports.html">Sport</a></li>
-          <li><a href="movies.html">Movies</a></li>
-        </ul>
-      </div>
-    </nav>
+    <nav class="navigation nav-bar" role="navigation"></nav>
   </div>
 
-  <!--Slide banner -------------------------------------------------------------------------------- -->
-
-  <!-- Text Banner -------------------------------------------------------------------------------- -->
-  <section class="section no-pad-bot z-depth-1 black" id="index-banner">
-    <div class="container">
-      <div class="header white-text center"><a href="index.html"><img src="assets/images/logo-6.png"></a></div>
-        <div class="row center">
-          <h3 class="header white-text col s12">Contact Us</h3>
+   <!-- Text Banner-- jQuery generated for row-1-----file:page-setup.js------------------------>
+   <section class="section no-pad-bot z-depth-1 black" id="index-banner">
+      <div class="container text-banner">
+        <div class="row row-1"></div>
+        <div class="row row-2">
+          <h5 class="header white-text center col s12">Contact Us</h5>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Main Section-------------------------------------------------------------------------------- -->
   <main class="section main-container white">
-      <div class="container ">
-      <div class="row">
-        <form class="col m8 offset-m2 s12">
-          <div class="input-field col s12">
-              <input id="name" type="text">
-              <label for="name">Name</label>
-          </div>
-          <div class="input-field col s12">
-              <input id="email" type="email" class="form-input">
-              <label for="email">Email</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="message" class="materialize-textarea"></textarea>
-            <label for="message">Message</label>
-          </div>
+    <div class="row">
+      <form class="col s12 offset-m3">
         <div class="row">
-            <div class="col m12">
-              <p class="right-align"><button class="btn btn-medium waves-effect waves-light blue darken-4" type="button" name="action">Send Message</button></p>
-            </div>
+          <div class="input-field col s3">
+            <input id="input-first-name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="input-last-name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
         </div>
-    </form>
+        <div class="row">
+          <div class="input-field col s4">
+            <input id="input-email" type="email" class="validate">
+            <span class="helper-text" data-error="not a valid format" data-success="right"></span>
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <textarea id="input-message" class="materialize-textarea validate" data-length="250"></textarea>
+            <label for="textarea">Message</label>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col s12 offset-m3">
+          <button class="btn waves-effect waves-light" id="contact-form-submit" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col s12 offset-m3">
+          <p id="contact-info-text"></p>
+        </div>
+      </div>
+    </div>     
   </main>
 
-  <!-- Footer----------------------------------------------------------------------------------->
-  <footer class=" page-footer">
-      <div class="row row-icons">
-        <div class="col l12 s12">
-          <ul class="icons">
-            <li><a class="sm-icon" href="assets/images/Facebook.png"><img src="assets/images/facebook-logo.png"></a></li>
-            <li><a class="sm-icon" href="assets/images/Twitter.png"><img src="assets/images/twitter-logo.png"></li>
-            <li><a class="sm-icon" href="assets/images/Instagram.png"><img src="assets/images/instagram-logo.png"></a></li>
-            <li><a class="sm-icon" href="assets/images/YouTube.png"><img src="assets/images/YouTube-logo.png"></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row row-links">
-          <div class="col l12 s12">
-            <ul class="links">
-              <li><a class="black-text link-position" href="about.html">About Us</a></li>
-              <li><a class="black-text link-position" href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
-      </div>
-    </div>
-    <div class="footer-copyright black">
-      <div class="container">
-          <a class="white-text">© Local Event Spotter 2019. All rights reserved.</a>
-      </div>
-    </div>
-  </footer>
-    
+  <!-- Footer jQuery generated--file:page-setup.js------------------------------------->
+  <footer class=" page-footer"></footer>
 
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> -->
-  <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+ 
+  <script src="assets/javascript/page-setup.js"></script>
   <script src="assets/javascript/script.js"></script>
   
 </body>
