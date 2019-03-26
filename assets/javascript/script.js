@@ -6,37 +6,6 @@ $(document).ready(function (){
   $('.materialboxed').materialbox();
   $('textarea#textarea').characterCounter();
   $('.sidenav').sidenav();
-
-
-  var cl = console.log;
-
-  // //  --- AJAX for Seatgeek API --------------------------------------------------------------//
-  // // Add an event listener to Zip Code variable, limit it to mile range
-  // var zipCode =  75211;
-  // //Add an event listener for the drop-down radius of the miles
-  // var mileRange= "10mi";
-  // var queryURL = "https://api.seatgeek.com/2/events?geoip=" + zipCode + "&range=" + mileRange + "&client_id=MTU4NDc5NTh8MTU1MzEzMDYzNy4zNA";
-
-  // $.ajax({
-  //     url: queryURL,
-  //     method: "GET"
-  //   }).then(function (response) {
-  //       cl(queryURL);
-  //       cl(response);
-  //       cl("Events: " + response.events);
-  //       // createImage(response);
-  //     });
-     
-        
-  //  --- API Home Page Images --------------------------------------------------------------//
-//  function createImage(data){
-//     var imgCol = $('<div class="col s12 m4"></div>');
-//     var imgBlock = $('<div class="icon-block"></div>');
-//     imgBlock.append($('<img class="materialboxed" src="' + data.events.performers[0] + '">'));
-//     imgBlock.append($('<p class="img-text">' + data.events.title +'</p>'));
-//     imgCol.append(imgBlock);
-//     $('.img-API').append(imgCol);
-//   }
  
 
   //  --- Firebase for contact form------------------------------------------------------//
