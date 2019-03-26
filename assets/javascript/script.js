@@ -6,7 +6,8 @@ $(document).ready(function (){
   $('.materialboxed').materialbox();
   $('textarea#textarea').characterCounter();
   $('.sidenav').sidenav();
- 
+  $('.modal').modal();
+
 
   //  --- Firebase for contact form------------------------------------------------------//
 
@@ -22,32 +23,19 @@ $(document).ready(function (){
   firebase.initializeApp(config);
   var fdb = firebase.database();
 
+  
   var firstName = "";
   var lastName = "";
   var email = "";
   var message = "";
 
-    // //-- Initialize Firebase ----------------------------------------------//
-    // var config = {
-    // apiKey: "AIzaSyAyBYJFRwwDHbOGYKG9CZkqtAinxmP6nDo",
-    // authDomain: "smu-g5-p1-eventpage.firebaseapp.com",
-    // databaseURL: "https://smu-g5-p1-eventpage.firebaseio.com",
-    // projectId: "smu-g5-p1-eventpage",
-    // storageBucket: "smu-g5-p1-eventpage.appspot.com",
-    // messagingSenderId: "48500713462"
-    // };
-    // firebase.initializeApp(config);
-
-
-  $("#contact-form-submit").on("click", function() {
-    // event.preventDefault();
-
+  $("#contact-form-submit").on("click", function(event) {
+    event.preventDefault();
 
     firstName = $("#input-first-name").val().trim();
     lastName = $("#input-last-name").val().trim();
     email = $("#input-email").val().trim();
     message = $("#input-message").val().trim();
-
 
     fdb.ref().push({
       firstName : firstName,
@@ -57,21 +45,18 @@ $(document).ready(function (){
     });
   });
 
-
   fdb.ref().on("child_added", function(childSnapshot) {
     var fsv = childSnapshot.val();
-
     var contactResponseText = (fsv.firstName + ", thank you for contacting us. You will hear from us soon.");
-    $(".contact-info-text").text(contactResponseText);
-  }),
-    function(errorObject) {
-      cl("The read failed: " + errorObject.code);
+    $("#contact-info-text").text(contactResponseText);
+  },
+  function(errorObject) {
+    cl("The read failed: " + errorObject.code);
+  });  
 
-    }; 
-
-
-
+  $(".modal-close").on("click", function() {
+    $("form").trigger("reset");
+  });
 });
     
-    
-    
+
