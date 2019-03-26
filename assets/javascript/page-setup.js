@@ -4,10 +4,11 @@ $(document).ready(function () {
 function createNavbar(){
 
   var navbarContent = $('<div class="nav-wrapper container"></div>');
-    navbarContent.append($('<a id="logo-container" href="index.html" class="brand-logo"><img src="assets/images/logo-fav.png"></a>'));
+    navbarContent.append($('<a id="logo-container" href="index.html" class="right rand-logo"><img src="assets/images/logo-fav.png"></a>'));
     navbarContent.append($('<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>'));
 
-  var navbarMenu = $('<ul class="right hide-on-med-and-down menu-text"></ul>');
+  var navbarMenu = $('<ul class="left hide-on-med-and-down menu-text"></ul>');
+    navbarMenu.append($('<li><a class="blue accent-4 btn-flat">News Letter Sign-Up</a></li>'));
     navbarMenu.append($('<li><a href="index.html">Home</a></li>'));
     navbarMenu.append($('<li><a href="events.html">Events</a></li>'));
     navbarMenu.append($('<li><a href="movies.html">Movies</a></li>'));
@@ -79,11 +80,9 @@ function createTextBanner(){
   var goButton= $('<button class="btn waves-effect waves-light" id="go-btn" type="submit" name="action"><i class="material-icons right">send</i></button>')
   filterFields.append(goButton); 
  
-
  $(".row-3").append(filterFields);
 }
 
 createTextBanner();
-
   
 });
