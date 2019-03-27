@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
 function createNavbar(){
 
   var navbarContent = $('<div class="nav-wrapper container"></div>');
@@ -82,7 +81,15 @@ function createTextBanner(){
  
  $(".row-3").append(filterFields);
 }
-
 createTextBanner();
+
+
+    //----- Materialize features ---------------------//
+
+    $('.slider').slider({full_width: true});
+    $('.materialboxed').materialbox();
+    $('textarea#textarea').characterCounter();
+    $('.modal').modal(); 
+    // $('.sidenav').sidenav();
   
 });

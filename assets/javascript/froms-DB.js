@@ -1,13 +1,5 @@
 $(document).ready(function (){
 
-  //----- Materialize features ---------------------//
-
-  $('.slider').slider({full_width: true});
-  $('.materialboxed').materialbox();
-  $('textarea#textarea').characterCounter();
-  $('.sidenav').sidenav();
-  $('.modal').modal();
-
 
   //  --- Firebase for contact form------------------------------------------------------//
 
