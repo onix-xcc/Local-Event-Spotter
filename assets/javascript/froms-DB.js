@@ -1,7 +1,7 @@
 $(document).ready(function (){
 
 
-  //  --- Firebase for contact form------------------------------------------------------//
+  //  --- Firebase Database------------------------------------------------------//
 
   var config = {
     apiKey: "AIzaSyB57NQ2m4VxhU4-b6LORPi4MPDeCC5POMU",
@@ -14,12 +14,13 @@ $(document).ready(function (){
 
   firebase.initializeApp(config);
   var fdb = firebase.database();
-
   
   var firstName = "";
   var lastName = "";
   var email = "";
   var message = "";
+
+  //  --- Firebase for contact form------------------------------------------------------//
 
   $("#contact-form-submit").on("click", function(event) {
     event.preventDefault();
@@ -29,7 +30,7 @@ $(document).ready(function (){
     email = $("#input-email").val().trim();
     message = $("#input-message").val().trim();
 
-    fdb.ref().push({
+    fdb.ref("/contactFormsUnresolved").push({
       firstName : firstName,
       lastName : lastName,
       email : email,
@@ -37,7 +38,7 @@ $(document).ready(function (){
     });
   });
 
-  fdb.ref().on("child_added", function(childSnapshot) {
+  fdb.ref("/contactFormsUnresolved").on("child_added", function(childSnapshot) {
     var fsv = childSnapshot.val();
     var contactResponseText = (fsv.firstName + ", thank you for contacting us. You will hear from us soon.");
     $("#contact-info-text").text(contactResponseText);
@@ -49,6 +50,25 @@ $(document).ready(function (){
   $(".modal-close").on("click", function() {
     $("form").trigger("reset");
   });
+
+//  --- Firebase for  email sign-up ------------------------------------------------------//
+$("#submit-email").on("click", function(event) {
+    event.preventDefault();
+
+    var email2 = $("#email").val().trim();
+
+    fdb.ref("/emailList").push({
+      email : email2,
+    });
+  });
+
+  fdb.ref("/emailList").on("child_added", function(childSnapshot) {
+    var fsv = childSnapshot.val();
+  },
+  function(errorObject) {
+    cl("The read failed: " + errorObject.code);
+  });  
+
 });
     
 

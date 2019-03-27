@@ -72,15 +72,15 @@ $(document).ready(function () {
            
             for (var i = 0; i < data.length; i++) {
                 seatgeekTitle = data[i].title;
-                var imgCol = $('<div class="col s12 m4">');
-                var card = $('<div class="card">');
+                var imgCol = $('<div class="col s12 m6 l4">');
+                var card = $('<div class="card small">');
 
                 var cardImg = $('<div class="card-image">')
                 cardImg.append($('<img src="'+ data[i].performers[0].image +'" alt="'+ data[i].taxonomies[0].name + ' image">'));
                 card.append(cardImg);
 
                 var cardText = $('<div class="card-content">')
-                cardText.append($('<a class="card-title" href="https://www.youtube.com/watch?v='+ searchVideo(seatgeekTitle) + '">'+ seatgeekTitle +'<a>'));
+                cardText.append($('<a class="card-text" href="https://www.youtube.com/watch?v='+ searchVideo(seatgeekTitle) + '">'+ seatgeekTitle +'<a>'));
                 card.append(cardText);
 
                 var cardLink = $('<div class="card-action">')
