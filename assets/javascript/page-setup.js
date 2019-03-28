@@ -62,10 +62,10 @@ $(document).ready(function () {
 
     var zipCodeMilesSelect= $('<select id="range" class="browser-default col l2"></select>');
     zipCodeMilesSelect.append($('<option value="" disabled selected>Miles Radius</option>'));
-    zipCodeMilesSelect.append($('<option value="1">5</option>'));
-    zipCodeMilesSelect.append($('<option value="2">10</option>'));
-    zipCodeMilesSelect.append($('<option value="3">25</option>'));
-    zipCodeMilesSelect.append($('<option value="3">50</option>'));
+    zipCodeMilesSelect.append($('<option>5</option>'));
+    zipCodeMilesSelect.append($('<option>10</option>'));
+    zipCodeMilesSelect.append($('<option>25</option>'));
+    zipCodeMilesSelect.append($('<option>50</option>'));
     filterFields.append(zipCodeMilesSelect);
 
     var zipCodeMilesLabel= $('<label class="label-icon grey-text" for="search"></label>');
