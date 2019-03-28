@@ -19,8 +19,6 @@ $(document).ready(function () {
 
                 // Append the TRow to the table body
                 $(".events-table").append(tRow);
-
-
             };
 
 
@@ -45,16 +43,6 @@ $(document).ready(function () {
                 });
             };
 
-            //--- API Home Page Images --------------------------------------------------------------//
-            function createImage(data) {
-                var imgCol = $('<div class="col s12 m4"></div>');
-                var imgBlock = $('<div class="icon-block"></div>');
-                imgBlock.append($('<img class="materialboxed" src="' + data.events.performers[0] + '">'));
-                imgBlock.append($('<p class="img-text">' + data.events.title + '</p>'));
-                imgCol.append(imgBlock);
-                $('.img-API').append(imgCol);
-            };
-        };
 
         $("#go-btn").on("click", function (event) {
             // Preventing the button from trying to submit the form
@@ -64,5 +52,6 @@ $(document).ready(function () {
             var inputMiles = parseInt($("#range").val().trim());
             // Running the searchLocalEvents function (passing zip as an argument)
             searchLocalEvents(inputZip, inputMiles);
+        });
 
         });

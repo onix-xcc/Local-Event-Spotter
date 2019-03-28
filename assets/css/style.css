@@ -4,6 +4,7 @@ body{
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
+    color: grey;
 }
 
 /* ----- Navigation bar  ----- */
@@ -63,10 +64,17 @@ body{
   margin-top: 0;
 
 }
-
 #go-btn{
   margin-left: 1rem;
   margin-top: 0.2rem;
+}
+
+.card{
+   max-width: 300px;
+}
+.card-text{
+  color: grey;
+  font-size: 1.0em;
 }
 
 /* ----- Footer Section ----- */
