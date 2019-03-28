@@ -33,8 +33,8 @@ var createRow = function (response) {
     $(".movie-table").append(tRow);
 };
 
-function searchMoviesInTown(zipcode, miles) {
-    var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=2019-03-25&zip=" + zipcode + "&radius=" + miles + "&imageSize=Md&api_key=j7ukwvbq74h5d9t7acars4em";
+function searchMoviesInTown(date, zipcode, miles) {
+    var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + date +"&zip=" + zipcode + "&radius=" + miles + "&imageSize=Md&api_key=j7ukwvbq74h5d9t7acars4em";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -50,11 +50,12 @@ function searchMoviesInTown(zipcode, miles) {
 $("#go-btn").on("click", function (event) {
     // Preventing the button from trying to submit the form
     event.preventDefault();
-    // Storing the zip code
+    // Storing the date, zip code, and radius
+    var inputDate = $(".datepicker").val().trim();
     var inputZip = $("#zip").val().trim();
-var inputMiles = parseInt($("#range").val().trim());
+    var inputMiles = parseInt($("#range").val().trim());
     // Running the searchMoviesInTown function(passing in the zip as an argument)
-    searchMoviesInTown(inputZip, inputMiles);
+    searchMoviesInTown(inputDate, inputZip, inputMiles);
 });
 
 });
