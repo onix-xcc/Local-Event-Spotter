@@ -1,8 +1,8 @@
 $(document).ready(function (){
 
+  var cl = console.log
 
-  //  --- Firebase Database------------------------------------------------------//
-
+  //  --- Firebase Database user key and initialization--------------------//
   var config = {
     apiKey: "AIzaSyB57NQ2m4VxhU4-b6LORPi4MPDeCC5POMU",
     authDomain: "smu-p1-g5.firebaseapp.com",
@@ -15,12 +15,12 @@ $(document).ready(function (){
   firebase.initializeApp(config);
   var fdb = firebase.database();
   
+
+  //--- "Contact Us" form inputs are stored (pushed) into firebase database ---//
   var firstName = "";
   var lastName = "";
   var email = "";
   var message = "";
-
-  //  --- Firebase for contact form------------------------------------------------------//
 
   $("#contact-form-submit").on("click", function(event) {
     event.preventDefault();
@@ -35,39 +35,47 @@ $(document).ready(function (){
       lastName : lastName,
       email : email,
       message : message,
+      dateAdded : firebase.database.ServerValue.TIMESTAMP
     });
   });
 
+  //--- first name is pulled from firebase to be populated on form response message---//
   fdb.ref("/contactFormsUnresolved").on("child_added", function(childSnapshot) {
     var fsv = childSnapshot.val();
     var contactResponseText = (fsv.firstName + ", thank you for contacting us. You will hear from us soon.");
     $("#contact-info-text").text(contactResponseText);
   },
-  function(errorObject) {
-    cl("The read failed: " + errorObject.code);
-  });  
+    function(errorObject) {
+      cl("The read failed: " + errorObject.code);
+    });  
 
+  // to clear form and response message on submit --------------//
   $(".modal-close").on("click", function() {
     $("form").trigger("reset");
   });
 
-//  --- Firebase for  email sign-up ------------------------------------------------------//
-$("#submit-email").on("click", function(event) {
-    event.preventDefault();
 
-    var email2 = $("#email").val().trim();
+  //  --- Firebase for "email sign-up" ---stores email data for future newsletter emails------//
+  var email2 ="";
 
-    fdb.ref("/emailList").push({
-      email : email2,
+  $("#submit-email").on("click", function(event) {
+      event.preventDefault();
+
+      email2 = $("#input-email").val().trim();
+      cl(email2);
+
+      fdb.ref("/newsletterSignUp").push({
+        email : email2,
+        dateAdded : firebase.database.ServerValue.TIMESTAMP
+      });
     });
-  });
 
-  fdb.ref("/emailList").on("child_added", function(childSnapshot) {
-    var fsv = childSnapshot.val();
-  },
-  function(errorObject) {
-    cl("The read failed: " + errorObject.code);
-  });  
+    // fdb.ref("/newletterSignUp").on("child_added", function(childSnapshot) {
+    //   // var fsv = childSnapshot.val();
+    // },
+    // function(errorObject) {
+    //   cl("The read failed: " + errorObject.code);
+    // });  
 
 });
     

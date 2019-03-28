@@ -18,6 +18,22 @@ body{
   font-size: 1.4em;
   padding-top: 0.5em;
 }
+#modal1{
+  color: black;
+  max-width: 300px;
+}
+.model-content{
+
+padding: 1.5em 0;
+}
+
+#email-box{
+margin-left: 1.5em;
+
+}
+.check-box{
+  margin-left: 1.5em;
+}
 
 /* ----- Slide banner ----- */
 
