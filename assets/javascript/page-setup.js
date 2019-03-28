@@ -9,28 +9,29 @@ $(document).ready(function () {
     var signUpBtnTrigger = $(' <button data-target="modal1" type="submit" name="action" class="btn modal-trigger right">Sign Up</button>');
     navbarContent.append(navbarLogo,navbarMobileMenuTrigger,signUpBtnTrigger);
     
+    //---creates navbar menu on all pages (bigger screen)----------------------//
     var navbarMenu = $('<ul class="center hide-on-med-and-down menu-text"></ul>');
     navbarMenu.append($('<li><a href="index.html">Home</a></li>'));
     navbarMenu.append($('<li><a href="events.html">Events</a></li>'));
     navbarMenu.append($('<li><a href="movies.html">Movies</a></li>'));
     navbarContent.append(navbarMenu);
 
+    //---creates mobile navbar menu on all pages (replaces menu on small screen----//
     var navbarMobileMenu = $('<ul class="sidenav" id="mobile-demo"></ul>');
     navbarMobileMenu.append($('<li><a href="index.html">Home</a></li>'));
     navbarMobileMenu.append($('<li><a href="events.html">Events</a></li>'));
     navbarMobileMenu.append($('<li><a href="movies.html">Movies</a></li>'));
     navbarContent.append(navbarMobileMenu);
   
-    var signUpBox = $('<div id="modal1" class="modal">');
-    var signUpContent= $('<div class="modal-content white black-text">');
-    signUpContent.append($('<p>Please fill in informationbelow</p>'));
-    var emailSignUpField= $('<form class="row"><div class="input-field col s12"><input id="email" type="email" class="validate"> <label for="email">Email</label><span class="helper-text" data-error="wrong" data-success="right"></span></div></form>');
-    var checkboxConcert= $('<p><label><input type="checkbox"/><span>Concerts</span></label></p>');
-    var checkboxSport= $('<p><label><input type="checkbox"/><span>Sports</span></label></p>');
-    var checkboxMovies= $('<p><label><input type="checkbox"/><span>Movies</span></label></p>');
-    signUpBox.append(signUpContent,emailSignUpField,checkboxConcert,checkboxSport,checkboxMovies);
+     //---creates sign up button and email sign up form on modal window ----//
+    var signUpBox = $('<div id="modal1" class="modal white">');
+    var signUpContent= $('<div class="modal-content">');
+    signUpContent.append($('<p>To receive a weekly newsletter from us, please fill in your email below</p>'));
+    var emailSignUpField= $('<form class="row"><div class="input-field col s12"><input id="input-email" type="email" class="validate"><span class="helper-text" data-error="not a valid email format" data-success="right"></span><label id="email-box" for="email">Email</label></div></form>');
+    signUpBox.append(signUpContent,emailSignUpField);
 
-    var signUpFooter = $('<div class="modal-footer">');
+    // creates modal footer and #submit-email button --- linked to firebase---//
+    var signUpFooter = $('<div class="modal-footer white">');
     signUpFooter.append($('<a href="#!" class="modal-close waves-effect waves-green btn-flat" id="submit-email">Submit</a>'));
     signUpBox.append(signUpFooter);
     navbarContent.append(signUpBox);
@@ -40,7 +41,7 @@ $(document).ready(function () {
   createNavbar();
 
 
-//----- jQuery for Text Banner HTML content and features ---------------------//
+  //----- jQuery for Text Banner HTML content and features ---------------------//
   function createTextBanner(){
 
     //---Logo----//
@@ -51,26 +52,30 @@ $(document).ready(function () {
     //---Filters----//
     var filterFields= $('<div class="filter-fields"></div>');
 
+    //----- drop down calendar for date filter ------//
     var datePicker= $('<div class="date-field col l3"></div>');
     datePicker.append($('<input type= "date" class= "datepicker"></input>'));
     filterFields.append(datePicker);
 
+    //-----input field for zip code ------//
     var zipCodeField= $('<div class="input-field col l2"></div>');
     zipCodeField.append($('<input class id="zip" name= "zip" type="text" required pattern="[0-9]{5}"></input>'));
     zipCodeField.append($('<label class="label-icon grey-text" for="search">Enter a zip code</label>'));
     filterFields.append(zipCodeField);
 
+    //-----drop menu for mile range ------//
     var zipCodeMilesSelect= $('<select id="range" class="browser-default col l2"></select>');
     zipCodeMilesSelect.append($('<option value="" disabled selected>Miles Radius</option>'));
-    zipCodeMilesSelect.append($('<option>5</option>'));
     zipCodeMilesSelect.append($('<option>10</option>'));
     zipCodeMilesSelect.append($('<option>25</option>'));
     zipCodeMilesSelect.append($('<option>50</option>'));
+    zipCodeMilesSelect.append($('<option>75</option>'));
     filterFields.append(zipCodeMilesSelect);
 
     var zipCodeMilesLabel= $('<label class="label-icon grey-text" for="search"></label>');
     filterFields.append(zipCodeMilesLabel);
 
+    //----- filter submit button to generate search----//
     var goButton= $('<button class="col l1 btn waves-effect waves-light" id="go-btn" type="submit" name="action">Go<i class="material-icons right">send</i></button>')
     filterFields.append(goButton); 
   
@@ -79,6 +84,8 @@ $(document).ready(function () {
   createTextBanner();
 
   //----- jQuery for Footer HTML and content---------------------//
+
+  // ------ creates social media site links and icons in footer ------//
   function createFooter(){
     var rowIcon = $('<div class="row row-icons"></div>');
     var socialMediaIcons = $('<ul class="icons"></ul>');
@@ -89,6 +96,7 @@ $(document).ready(function () {
     rowIcon.append(socialMediaIcons);
     $(".page-footer").append(rowIcon);
 
+    // ------ creates site links to about and contact us pages in footer ------//
     var rowLinks = $('<div class="row row-links"></div>');
     var pageLinks = $('<ul class="links"></ul>');
     pageLinks.append($('<li><a class="black-text link-position" href="about.html">About Us</a></li>'));
@@ -96,6 +104,7 @@ $(document).ready(function () {
     rowLinks.append(pageLinks);
     $(".page-footer").append(rowLinks);
 
+     // ------ creates copyright footer---last row on page------//
     var rowCopyright = $('<div class="footer-copyright black"></div>');
     var copyrightContainer = $('<div class="container"></div>');
     copyrightContainer.append($('<a class="white-text">© Local Event Spotter 2019. All rights reserved.</a>'));
@@ -104,15 +113,6 @@ $(document).ready(function () {
   }
   createFooter();
 
-
-  //----- Materialize features ---------------------//
-
-  $('.slider').slider({full_width: true});
-  $('.materialboxed').materialbox();
-  $('textarea#textarea').characterCounter();
-  $('.modal').modal(); 
-  $('#modal1').modal();
-  $('.dropdown-trigger').dropdown();
-  // $('.sidenav').sidenav();
-
 });
+
+  
