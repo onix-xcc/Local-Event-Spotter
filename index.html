@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Local Event Spotter</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Germania+One|Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" href="assets/images/logo-favBlack.ico" type="image/gif" sizes="32x32">
@@ -14,6 +15,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="assets/javascript/forms-firebase.js"></script>
 </head>
 
 <body>
@@ -24,26 +26,26 @@
   </div>
 
   <!--Slide banner--only on landing page----------------------------------------------->
-  <div class="slider z-depth-2">
+  <div class="slider hide-on-small-only z-depth-2">
       <div class="container slide-container">
       <ul class="slides">
       <li>
         <img src="assets/images/banner-1.jpg"> 
-        <div class="caption left-align black-text">
+        <div class="caption left-align hide-on-small-only black-text">
           <h3>Concerts</h3>
           <h5 class="light grey-darken-4-text text-lighten-3">Take your friends to a concert.</h5>
         </div>
       </li>
       <li>
         <img src="assets/images/banner-2.jpg">
-        <div class="caption right-align black-text">
+        <div class="caption right-align hide-on-small-only black-text">
           <h3>Sport</h3>
           <h5 class="light grey-darken-4-text text-lighten-3">Take your family to a baseball game.</h5>
         </div>
       </li>
       <li>
         <img src="assets/images/banner-3.jpg">
-        <div class="caption right-align  black-text">
+        <div class="caption right-align hide-on-small-only black-text">
           <h3>Movies</h3>
           <h5 class="light grey-darken-4-text text-lighten-3">Take your date out for a movie night.</h5>
         </div>
@@ -57,17 +59,15 @@
     <div class="container text-banner">
       <div class="row row-1"></div>
       <div class="row row-2">
-        <h5 class="header white-text center col s12">All events at one location</h5>
+        <h4 class="header white-text center col s12">All events at one location</h4>
       </div>
-      <div class="row video-API"></div>
-    </div>
   </section>
 
   <!-- Main Section-------------------------------------------------------------------------------- -->
   <main class="section main-container white">
     <div class="nav-wrapper container">
        <div class="row">
-          <h4 class="left">This weeks event in your area.</h4>
+          <h5 class="left">This week events in your area.</h5>
       </div>
       <div class="row img-API">
       </div>
@@ -82,7 +82,7 @@
   <script src="assets/javascript/page-setup.js"></script>
   <script src="assets/javascript/materialize.js"></script>
   <script src="assets/javascript/events-landing.js"></script>
-  <script src="assets/javascript/forms-firebase.js"></script>
+ 
   
 
 

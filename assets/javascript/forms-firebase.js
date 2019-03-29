@@ -14,9 +14,9 @@ $(document).ready(function (){
 
   firebase.initializeApp(config);
   var fdb = firebase.database();
-  
 
   //--- "Contact Us" form inputs are stored (pushed) into firebase database ---//
+
   var firstName = "";
   var lastName = "";
   var email = "";
@@ -55,13 +55,15 @@ $(document).ready(function (){
   });
 
 
-  //  --- Firebase for "email sign-up" ---stores email data for future newsletter emails------//
+   //--- Firebase for "email sign-up" ---stores email data for future newsletter emails------//
+
   var email2 ="";
 
-  $("#submit-email").on("click", function(event) {
+  $(document).on('click', '#submit-email', function(){
+    cl("click");
       event.preventDefault();
 
-      email2 = $("#input-email").val().trim();
+      email2 = $("#email-sign-up").val().trim();
       cl(email2);
 
       fdb.ref("/newsletterSignUp").push({
@@ -70,12 +72,6 @@ $(document).ready(function (){
       });
     });
 
-    // fdb.ref("/newletterSignUp").on("child_added", function(childSnapshot) {
-    //   // var fsv = childSnapshot.val();
-    // },
-    // function(errorObject) {
-    //   cl("The read failed: " + errorObject.code);
-    // });  
 
 });
     

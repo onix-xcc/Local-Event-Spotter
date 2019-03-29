@@ -1,59 +1,132 @@
-/* ---- Global style -----*/
+/* ---- Global style ---------------------------------------------------------------*/
 body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    color: grey;
+    color: rgb(56, 56, 56);
 }
 
-/* ----- Navigation bar  ----- */
-.nav-bar{
-  min-height: 100px;
-  padding-top: 0.8em;
+
+/* Overwriting Materialize button and input field CSS------------------------ */
+.btn{
+  background-color: #e57373;
+}
+
+.btn:hover{
+  background-color: #ef9a9a ;
+}
+
+.input-field input[type=email]:focus + label{
+  color: #e57373 !important;
+}
+
+.input-field input[type=email]:focus{
+  border-bottom: 1px solid  #14213d !important;
+  box-shadow: 0 0.5px 0 0 #ef9a9a !important;
+}
+
+.input-field input[type=text]:focus + label{
+  color: #e57373 !important;
+}
+
+.input-field input[type=text]:focus{
+  border-bottom: 1px solid  #14213d !important;
+  box-shadow: 0 0.5px 0 0 #ef9a9a !important;
+}
+
+.input-field textarea[type=text]:focus + label{
+  color: #e57373 !important;
+}
+
+.input-field textarea[type=text]:focus{
+  border-bottom: 1px solid  #14213d !important;
+  box-shadow: 0 0.5px 0 0 #ef9a9a !important;
+}
+
+.date-field input[type=date]:focus + label{
+  color: #e57373 !important;
+}
+
+.date-field input[type=date]:focus{
+  border-bottom: 1px solid  #14213d !important;
+  box-shadow: 0 0.5px 0 0 #ef9a9a !important;
+}
+
+/* ----- Navigation bar  -------------------------- */
+.navbar-fixed {
+  height: 100px;
+  padding-top: 0.5em;
   background-color: #14213d;
+}
+.nav-bar{
+  background-color: #14213d;
+  height: 100px;
 }
 
 .menu-text li a {
-  font-size: 1.4em;
+  font-size: 1.2em;
   padding-top: 0.5em;
 }
+
+#logo-container{
+  padding: 0 0 0 1em;
+  height: 80%;
+  
+}
+ 
+.modal-trigger{
+ margin-top:1.5em;
+}
+
 #modal1{
   color: black;
   max-width: 300px;
+  line-height: 1.5em;
 }
-.model-content{
 
+.model-content{
 padding: 1.5em 0;
 }
 
 #email-box{
 margin-left: 1.5em;
-
-}
-.check-box{
-  margin-left: 1.5em;
 }
 
-/* ----- Slide banner ----- */
-
-/* ----- Text banner ----- */
-#index-banner{
-  padding: 3em 0 1em;
+#email-sign-up{
+border-bottom: 1px solid  #14213d;
 }
+  
+
+
+/* ----- Slide banner ---------------------------------------- */
+
+/* ----- Text banner ----------------------------------------- */
+.header{
+  font-family: 'Germania One', cursive;
+}
+
+.row-2{
+  margin-bottom: 1em;
+}
+.banner-logo{
+  margin-top: 1em;
+}
+.datepicker{
+  width: 50%;
+}
+  
+
 .zip-code-input{
-  max-width: 50%;
+  width: 50%;
   text-align: center;
 }
 
-.input-field{
-  background-color: white;
-}
-.date-field{
-  background-color: white;
+.browser-default{
+  width: 18%;
 }
 
-/* ----- Main Section ----- */
+/* ----- Main Section ---------------------------------------- */
 .main-container {
   flex: 1 0 auto;
   padding: 3em 0 3em;
@@ -92,8 +165,8 @@ margin-left: 1.5em;
   color: grey;
   font-size: 1.0em;
 }
-
-/* ----- Footer Section ----- */
+-
+/* ----- Footer Section -------------------------------------- */
 .page-footer{
   background-color: #bd3e3e;
   text-align: center;
@@ -124,3 +197,4 @@ margin-left: 1.5em;
   margin-right: 1em;
   display: inline-block;
 }
+

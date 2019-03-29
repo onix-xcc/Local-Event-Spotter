@@ -6,14 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Local Event Spotter</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Germania+One|Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" href="assets/images/logo-favBlack.ico" type="image/gif" sizes="32x32">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> 
+  <script src="assets/javascript/forms-firebase.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
       <div class="container text-banner">
         <div class="row row-1"></div>
         <div class="row row-2">
-          <h5 class="header white-text center col s12">Contact Us</h5>
+          <h4 class="header white-text center col s12">Contact Us</h4>
         </div>
       </div>
     </section>
@@ -56,7 +57,7 @@
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <textarea id="input-message" class="materialize-textarea validate" data-length="250"></textarea>
+            <textarea id="input-message" class="materialize-textarea validate" data-length="250" type="text"></textarea>
             <label for="textarea">Message</label>
           </div>
         </div>
@@ -83,7 +84,7 @@
  <!-- JavaScript files link to folder------------------------------------->
   <script src="assets/javascript/page-setup.js"></script>
   <script src="assets/javascript/materialize.js"></script>
-  <script src="assets/javascript/forms-firebase.js"></script>
+  
   
 </body>
 </html>
