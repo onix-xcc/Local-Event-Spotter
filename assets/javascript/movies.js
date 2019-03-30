@@ -29,7 +29,7 @@ $(document).ready(function () {
         var showtimesTd = $("<td id='time'>").html(showTimeText);
         console.log(showTimeText)
 
-        var ticketLinkTd = $('<td><a href"' + response.showtimes[0].ticketURI + '">Buy tickets</a></td>')
+        var ticketLinkTd = $('<td><a href= "' + response.showtimes[0].ticketURI + '">Buy tickets</a></td>');
 
         // Append the newly created table data to the table row
         tRow.append(titleTd, ratingTd);
