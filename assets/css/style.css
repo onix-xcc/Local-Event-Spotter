@@ -105,6 +105,9 @@ border-bottom: 1px solid  #14213d;
 .header{
   font-family: 'Germania One', cursive;
 }
+.row-1{
+  margin-bottom: 0;
+}
 
 .row-2{
   margin-bottom: 1em;
@@ -116,14 +119,12 @@ border-bottom: 1px solid  #14213d;
   width: 50%;
 }
   
-
 .zip-code-input{
   width: 50%;
-  text-align: center;
 }
 
 .browser-default{
-  width: 18%;
+  width: 50%;
 }
 
 /* ----- Main Section ---------------------------------------- */
@@ -169,22 +170,16 @@ border-bottom: 1px solid  #14213d;
 /* ----- Footer Section -------------------------------------- */
 .page-footer{
   background-color: #bd3e3e;
-  text-align: center;
-}
-
-.row-links .row-icons{
-  padding: 0;
-  margin: 0;
 }
 
 .icons li {
   display: inline-block;
-  margin: 0 1em;
+  margin: 0.5em 1em;
 }
 
  .links li {
   display: inline-block;
-  margin: 0 0.2em;
+  margin: 0.5em 0.2em;
   font-weight: 600;
   font-size: 1.2em;
 }

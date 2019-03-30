@@ -5,9 +5,11 @@ $(document).ready(function () {
     $('.slider').slider({full_width: true});
     $('.materialboxed').materialbox();
     $('textarea#textarea').characterCounter();
-    $('.modal').modal(); 
     $('#modal1').modal();
     $('.dropdown-trigger').dropdown();
-    // $('.sidenav').sidenav();
+    
 
+    
+
+    
 });

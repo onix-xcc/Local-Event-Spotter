@@ -26,11 +26,12 @@ $(document).ready(function () {
     var signUpBox = $('<div id="modal1" class="modal white">');
     var signUpContent= $('<div class="modal-content">');
     signUpContent.append($('<p>To receive a weekly newsletter from us, please fill in your email below</p>'));
-    var emailSignUpField= $('<form class="row"><div class="input-field col s12"><input id="email-sign-up" type="email" class="validate"><span class="helper-text" data-error="not a valid email format" data-success="right"></span><label id="email-box" for="email">Email</label></div></form>');
+    var emailSignUpField= $('<form class="row"><div class="input-field col s12"><input id="email-sign-up" type="email" class="validate" class="validate" required onsubmit="return validateEmail(email)><span class="helper-text" data-error="not a valid email format" data-success=""></span><label id="email-box" for="email">Email</label></div></form>');
     signUpBox.append(signUpContent,emailSignUpField);
 
     // creates modal footer and #submit-email button --- linked to firebase---//
     var signUpFooter = $('<div class="modal-footer white">');
+    signUpFooter.append($('<p class= "red darken-4" id="from-email-text"></p>'));
     signUpFooter.append($('<a href="#!" class="modal-close waves-effect waves-green btn-flat" id="submit-email">Submit</a>'));
     signUpBox.append(signUpFooter);
     navbarContent.append(signUpBox);
@@ -52,18 +53,18 @@ $(document).ready(function () {
     var filterFields= $('<div class="filter-fields"></div>');
 
     //----- drop down calendar for date filter ------//
-    var datePicker= $('<div class="date-field col l3"></div>');
+    var datePicker= $('<div class="date-field col l3 m6 s9"></div>');
     datePicker.append($('<input type= "date" class= "datepicker"></input>'));
     filterFields.append(datePicker);
 
     //-----input field for zip code ------//
-    var zipCodeField= $('<div class="input-field col l2"></div>');
+    var zipCodeField= $('<div class="input-field col l3 m6 s9"></div>');
     zipCodeField.append($('<input class id="zip" name= "zip" type="text" required pattern="[0-9]{5}"></input>'));
     zipCodeField.append($('<label class="label-icon grey-text" for="search">Zip Code</label>'));
     filterFields.append(zipCodeField);
 
     //-----drop menu for mile range ------//
-    var zipCodeMilesSelect= $('<select id="range" class="browser-default col l2"></select>');
+    var zipCodeMilesSelect= $('<select id="range" class="browser-default col l3 m6"></select>');
     zipCodeMilesSelect.append($('<option value="" disabled selected>Miles Radius</option>'));
     zipCodeMilesSelect.append($('<option>10</option>'));
     zipCodeMilesSelect.append($('<option>25</option>'));
@@ -86,7 +87,7 @@ $(document).ready(function () {
 
   // ------ creates social media site links and icons in footer ------//
   function createFooter(){
-    var rowIcon = $('<div class="row center row-icons"></div>');
+    var rowIcon = $('<div class="row row-icons center "></div>');
     var socialMediaIcons = $('<ul class="icons"></ul>');
     socialMediaIcons.append($('<li><a class="sm-icon" href="assets/images/Facebook.png"><img src="assets/images/facebook-logo.png"></a></li>'));
     socialMediaIcons.append($('<li><a class="sm-icon" href="assets/images/Twitter.png"><img src="assets/images/twitter-logo.png"></li>'));
@@ -96,7 +97,7 @@ $(document).ready(function () {
     $(".page-footer").append(rowIcon);
 
     // ------ creates site links to about and contact us pages in footer ------//
-    var rowLinks = $('<div class="row center row-links"></div>');
+    var rowLinks = $('<div class="row row-links center "></div>');
     var pageLinks = $('<ul class="links"></ul>');
     pageLinks.append($('<li><a class="black-text link-position" href="about.html">About Us</a></li>'));
     pageLinks.append($('<li><a class="black-text link-position" href="contact.html">Contact Us</a></li>'));
