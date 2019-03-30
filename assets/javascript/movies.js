@@ -42,7 +42,7 @@ $(document).ready(function () {
     
     // Creates the function to pull the data from the API based upon the date, zip code, and radius input from the user 
     function searchMoviesInTown(date, zipcode, miles) {
-        var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + date + "&zip=" + zipcode + "&radius=" + miles + "&imageSize=Md&api_key=j7ukwvbq74h5d9t7acars4em";
+        var queryURL = "https://data.tmsapi.com/v1.1/movies/showings?startDate=" + date + "&zip=" + zipcode + "&radius=" + miles + "&imageSize=Md&api_key=j7ukwvbq74h5d9t7acars4em";
         $.ajax({
             url: queryURL,
             method: "GET"
