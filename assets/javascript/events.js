@@ -30,7 +30,7 @@ $(document).ready(function () {
                 // The .substring extract only the time omitting the date
                 var eventTimeTd = $("<td>").text(data[i].datetime_local.substring(11, 16));
 
-                var eventTicketTd = $('<td><a href="' + data[i].url + '">Get tickets</a>');
+                var eventTicketTd = $('<td><a href="' + data[i].url + '">Buy tickets</a>');
 
                 // Append the newly created table data to the table row
                 tRow.append(eventNameTd, eventTypeTd, eventPerformers, eventTimeTd, eventTicketTd);
